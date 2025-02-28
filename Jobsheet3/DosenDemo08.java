@@ -12,9 +12,19 @@ public class DosenDemo08 {
         }
         System.out.println();
         System.out.println("========== Data Dosen ==========");
-        for (Dosen08 temp : arrayOfDosen) {
-            System.out.println("Data Dosen Ke-" + (j=j+1));
-            temp.cetakInfo();
-        }
+        // for (Dosen08 temp : arrayOfDosen) {
+        //     System.out.println("Data Dosen Ke-" + (j=j+1));
+        //     temp.cetakInfo();
+        // }
+        DataDosen08 dataDosen = new DataDosen08();
+        dataDosen.dataSemuaDosen(arrayOfDosen);
+        System.out.println();
+        dataDosen.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        System.out.println();
+        dataDosen.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        System.out.println();
+        dataDosen.infoDosenPalingTua(arrayOfDosen);
+        System.out.println();
+        dataDosen.infoDosenPalingMuda(arrayOfDosen);
     }
 }
