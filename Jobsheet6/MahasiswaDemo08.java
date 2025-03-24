@@ -29,12 +29,12 @@ public class MahasiswaDemo08 {
         // list.bubbleSort();
         // list.tampil();
 
-        System.out.println("Data Yang Sudah Terurut Menggunakan Selection Sort (ASC) : ");
-        list.selectionSort();
-        list.tampil();
-
-        // System.out.println("Data Yang Sudah Terurut Menggunakan Insertion Sort (ASC) : ");
-        // list.insertionSort();
+        // System.out.println("Data Yang Sudah Terurut Menggunakan Selection Sort (ASC) : ");
+        // list.selectionSort();
         // list.tampil();
+
+        System.out.println("Data Yang Sudah Terurut Menggunakan Insertion Sort (DESC) : ");
+        list.insertionSort();
+        list.tampil();
     }
 }
