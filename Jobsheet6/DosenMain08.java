@@ -71,12 +71,11 @@ public class DosenMain08 {
                     break;
                 case 5:
                     System.out.println("Terima Kasih!");
-                    System.exit(0);
                     break;
                 default:
                     System.out.println("Nomor Menu Tidak Ada!");
                     break;
             }
-        } while (true);
+        } while (menu != 5);
     }
 }
