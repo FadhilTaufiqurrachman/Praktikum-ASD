@@ -28,7 +28,14 @@ public class DLLMain08 {
             System.out.println("4. Hapus Di Akhir");
             System.out.println("5. Tampilkan Data");
             System.out.println("6. Sisipkan Setelah NIM Tertentu");
-            System.out.println("7. Cari Mahasiswa Berdasarkan NIM");      
+            System.out.println("7. Cari Mahasiswa Berdasarkan NIM");
+            System.out.println("8. Tambah Data Di Indeks Tertentu");
+            System.out.println("9. Hapus Setelah NIM Tertentu");
+            System.out.println("10. Hapus Pada Indeks Tertentu");
+            System.out.println("11. Tampilkan Data Pertama");
+            System.out.println("12. Tampilkan Data Terakhir");
+            System.out.println("13. Tampilkan Data Pada Indeks Tertentu");
+            System.out.println("14. Tampilkan Jumlah Data");      
             System.out.println("0. Keluar");
             System.out.print("Pilih Menu : ");       
             pilihan = input.nextInt();
@@ -63,6 +70,61 @@ public class DLLMain08 {
                         System.out.println("Data Tidak Ditemukan.");
                     }
                 }
+                case 8 -> {
+                    System.out.print("Masukkan Indeks Untuk Menambahkan Data : ");
+                    int index = input.nextInt();
+                    input.nextLine();
+                    Mahasiswa08 mhsIndex = inputMahasiswa(input);
+                    list.add(index, mhsIndex);
+                }
+                case 9 -> {
+                    if (list.isEmpty()) {
+                        System.out.println("List Kosong, Tidak Ada Data Yang Dihapus.");
+                        break;
+                    }
+                    System.out.print("Masukkan NIM Untuk Menghapus Data Setelah NIM : ");
+                    String keyNim = input.nextLine();
+                    list.removeAfter(keyNim);
+                }
+                case 10 -> {
+                    if (list.isEmpty()) {
+                        System.out.println("List Kosong, Tidak Ada Data Yang Dihapus.");
+                        break;
+                    }
+                    System.out.print("Masukkan Indeks Untuk Menghapus Data : ");
+                    int indexHapus = input.nextInt();
+                    input.nextLine();
+                    list.remove(indexHapus);
+                }
+                case 11 -> {
+                    Mahasiswa08 firstNode = list.getFirst();
+                    if (firstNode != null) {
+                        System.out.println("Data Pertama :");
+                        firstNode.tampil();
+                    } 
+                }
+                case 12 -> {
+                    Mahasiswa08 lastNode = list.getLast();
+                    if (lastNode != null) {
+                        System.out.println("Data Terakhir :");
+                        lastNode.tampil();
+                    } 
+                }
+                case 13 -> {
+                    if (list.isEmpty()) {
+                        System.out.println("List Kosong, Tidak Ada Data Yang Ditampilkan.");
+                        break;
+                    }
+                    System.out.print("Masukkan Indeks Untuk Menampilkan Data : ");
+                    int indexTampil = input.nextInt();
+                    input.nextLine();
+                    Mahasiswa08 dataAtIndex = list.getIndex(indexTampil);
+                    if (dataAtIndex != null) {
+                        System.out.println("Data Pada Indeks " + indexTampil + " :");
+                        dataAtIndex.tampil();
+                    } 
+                }
+                case 14 -> list.size();
                 case 0 -> System.out.println("Keluar Dari Program.");
                 default -> System.out.println("Pilihan Tidak Valid!");
             }
