@@ -116,9 +116,7 @@ public class Klinik {
                     }
                     riwayatTransaksi.perbaruiTransaksi(index, durasiLayanan);
                 }
-                case 11 -> {
-                    riwayatTransaksi.selectionSortByBiaya();
-                }
+                case 11 -> riwayatTransaksi.selectionSortByBiaya();
                 case 0 -> System.out.println(">> Terima Kasih Telah Menggunakan Sistem Antrian Klinik.\n");
                 default -> System.out.println(">> Pilihan Tidak Valid! Silakan Pilih Menu Yang Tersedia.");
             }

@@ -96,7 +96,7 @@ public class QueueTransaksi {
 
     public void selectionSortByBiaya() {
         if (isEmpty()) {
-            System.out.println("Riwayat Transaksi Kosong, Tidak Ada Data Yang Dapat Diurutkan.");
+            System.out.println(">> Riwayat Transaksi Kosong, Tidak Ada Data Yang Dapat Diurutkan.");
             return;
         }
         for (int i = 0; i < size - 1; i++) {
